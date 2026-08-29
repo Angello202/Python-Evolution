@@ -1,0 +1,16 @@
+Conv=['Km>Mi','F>C','Kg>lbs']
+
+def unit(a,b):
+    if b==Conv[0]:
+        return a*0.6213712
+    elif b==Conv[1]:
+        return (a-32)*5/9
+    elif b==Conv[2]:
+        return a*2.205
+
+try:
+    a=float(input("please enter the number u want converted"))
+    b=input(f"from the following choose the conversion\n{Conv}=")
+    print(unit(a,b))
+except:
+    print("please enter valid number/conversion")

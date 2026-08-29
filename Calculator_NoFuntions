@@ -1,0 +1,31 @@
+
+while True:
+    N1=float(input("x="))
+    N2=float(input("y="))
+    op=['+','-','^','*','/']
+    O1=input(f"What opertion would you like to use{op}=")
+    if O1==op[0]:
+       print(N1+N2)
+    elif O1==op[1]:
+     print(N1-N2)
+    elif O1==op[2]:
+     print(N1**N2)
+    elif O1==op[3]:
+     print(N1*N2)
+    elif O1==op[4]:
+     if N1==0:
+        print("Cannot divide by Zero")
+     elif N2==0:
+        print("Cannot divide by Zero")
+     else:
+        print(N1/N2)
+    else:
+     print("please enter valid operation")
+    New=input("Again?")
+    if New=="no":
+      break
+    elif New=="yes":
+      pass
+    else:
+      print("enter a valid ans")
+      break

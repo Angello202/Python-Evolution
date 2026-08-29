@@ -1,0 +1,52 @@
+
+def calc(N1,N2,O1):
+    op=['+','-','^','*','/']
+    if O1==op[0]:
+           return N1+N2
+    elif O1==op[1]:
+            return N1-N2
+    elif O1==op[2]:
+            return N1**N2
+    elif O1==op[3]:
+         return N1*N2
+    elif O1==op[4]:
+         if N2==0:
+            return("Cannot divide by Zero")
+         else:
+            return N1/N2
+    else:
+         return ("please enter valid operation")
+while True:
+    try:
+     N1=float(input("X="))
+     N2=float(input("Y="))
+    except:
+         print("please enter valid input")
+         break
+    else:
+        pass
+    op=['+','-','^','*','/']
+    O1=input(f"what is the operation you want to perform on Y by X\n from the following{op} =")
+    print(calc(N1,N2,O1))
+    A=input(f"do you want to continue Y/N =")
+    if A=="Y":
+     print(calc(N1,N2,O1))
+     pass
+    elif A=="N":
+     print("please enter valid answer")
+     break
+
+
+def unit(a,b):
+    Conv=['Km>Mi','F>C','Kg>lbs']
+    if b==Conv[0]:
+        return a*0.6213712
+    if b==Conv[1]:
+        return (a-32)*5/9
+    if b==Conv[2]:
+        return a*2.205
+Conv=['Km>Mi','F>C','Kg>lbs']
+a=float(input("please enter the number u want converted"))
+b=input(f"from the following choose the conversion\n{Conv}=")
+print(unit(a,b))
+
