@@ -1,0 +1,83 @@
+
+Board=[
+        ['','',''],#<- [o,o] [0,1] [0,2]
+        ['','',''],#<- [1,0] [1,1] [1,2]
+        ['','','']#<- [2,0] [2,1] [2,2]
+]
+def Win(a,b):
+  if Board[0][0]==Board[0][1]==Board[0][2]=="X":
+      return ("X has won")
+  elif Board[0][0]==Board[0][1]==Board[0][2]=="O":
+        return ("O has won")
+  elif Board[1][0]==Board[1][1]==Board[1][2]=="X":
+        return ("X has won")
+  elif Board[1][0]==Board[1][1]==Board[1][2]=="O":
+          return ("O has won")
+  elif Board[2][0]==Board[2][1]==Board[2][2]=="X":
+        return ("X has won")
+  elif Board[2][0]==Board[2][1]==Board[2][2]=="O":
+          return ("O has won")
+  elif Board[0][0]==Board[1][0]==Board[2][0]=="X":
+        return ("X has won")
+  elif Board[0][0]==Board[1][0]==Board[2][0]=="O":
+          return ("O has won")
+  elif Board[0][1]==Board[1][1]==Board[2][1]=="X":
+         return ("X has won")
+  elif Board[0][1]==Board[1][1]==Board[2][1]=="O":
+           return ("O has won")
+  elif Board[0][2]==Board[1][2]==Board[2][2]=="X":
+        return ("X has won")
+  elif Board[0][2]==Board[1][2]==Board[2][2]=="O":
+          return ("O has won")
+  elif Board[2][0]==Board[1][1]==Board[0][2]=="X":
+        return ("X has won")
+  elif Board[2][0]==Board[1][1]==Board[0][2]=="O":
+          return ("O has won")
+  elif Board[0][0]==Board[1][1]==Board[2][2]=="X":
+        return ("X has won")
+  elif Board[0][0]==Board[1][1]==Board[2][2]=="O":
+          return ("O has won")
+while True:
+  a=int(input("on whcih coloum do u want X to be:\n"))# a is the coloum 
+  b=int(input("on whcih Row do u want X to be:\n"))# b is the row
+  if a>2:
+    print("please enter valid number")
+    break
+  elif a<0:
+    print("please enter valid number")
+    break
+  elif b>2:
+    print("please enter valid number")
+    break
+  elif b<0:
+    print("please enter valid number")
+    break
+  Board[a][b]="X"
+  for row in Board:
+   print(row)
+  Winner=Win(a,b)
+  if Winner==("X has won"):
+    print("X has won")
+    break
+  a=int(input("on whcih coloum do u want O to be:\n"))# a is the coloum 
+  b=int(input("on whcih Row do u want O to be:\n"))# b is the row
+  
+  if a>2:
+    print("please enter valid number")
+    break
+  elif a<0:
+      print("please enter valid number")
+      break
+  elif b>2:
+      print("please enter valid number")
+      break
+  elif b<0:
+      print("please enter valid number")
+      break
+  Board[a][b]="O"
+  for row in Board:
+    print(row)
+  Winner=Win(a,b)
+  if Winner==("O has won"):
+    print("O has won")
+    break
