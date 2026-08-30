@@ -1,0 +1,25 @@
+import random
+Num=random.randint(1,100)
+while True:
+ # Num=random.randint(1,100) this should never be inside the loop or else random number eveytime
+ N1=float(input("guess the number:"))# i never made it for the right one
+ if N1>100:
+  print("the number is between 1 and 100 \n so below 100 ")
+ elif N1<1:
+  print("the number is between 1 and 100 \n so go higher")
+ elif N1>Num:
+  print("Lower")
+ elif N1<Num:
+  print("Higher")
+ elif N1==Num:
+  print("well Done That is the correct number")
+ a=input("wanna try again?\n Yes or No :")
+ if a=="yes":
+  pass
+ if a=="no":
+  break
+  
+ 
+ 
+  
+  
