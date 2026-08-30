@@ -1,0 +1,17 @@
+Task=[]
+while True:
+  x=input("please enter the task for today:\n")
+  Task.append(x)
+  A=input("any more Things you would like to add \n yes or no:").lower()#added lower() so you can enter YES Yes yES
+  
+  if A=="yes":
+    pass
+  elif A=="no":
+    for number, i in enumerate(Task,1): # i can make the result a lot more better looking useing enumerate
+      print(number,i)#This reads: "for each item in Task, call it i, print it, then move to the next item."
+
+      #And for i in range(5): is the same idea, except instead of looping through a list, you're looping through the numbers 0, 1, 2, 3, 4
+    break
+  else:
+    print("please enter valid response\n Please rerun the program")
+    break
